@@ -1,0 +1,49 @@
+<html ng-app="store" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.2-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-additions.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    <body ng-controller="StoreController as store">
+
+        <div id='cssmenu'>
+            <ul>
+                <li><font color="white" ><div id="data-viewer" style="margin-left: auto ;margin-top: 15px;margin-right: 30px ;font-size: medium" > Data Viewer </div></li>
+                </li>
+                <li><button type="button"  class="btn btn-group-lg btn-primary" data-template="aside.tpl.demo.html" data-placement="left" data-animation="am-slide-left" bs-aside="aside" data-container="body">Dimensions</button>
+                <br></li>
+            </ul>
+        </div>
+
+        <div >
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th ng-repeat="col in datapacket">
+                            <button type="button" class="btn btn-sm btn-default" title="{{popover.title}}" data-placement="bottom" data-content="{{popover.content}}" data-template="popover.tpl.demo.html" data-animation="am-flip-x" data-auto-close="1" bs-popover ng-click=forColumnElements($index)>
+                            {{ col }}
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tabledata" >
+                </tbody>
+            </table>
+        </div><!-- app goes here -->
+
+        <script type="text/javascript" src="js/vendor/react-0.12.2/build/react.min.js"></script> <!-- include React, ~18K gzipped-->
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/vendor/angular.min.js"</script>
+        <script type="text/javascript" src="js/vendor/modal.js"></script>
+        <script type="text/javascript" src="js/vendor/angular-strap.min.js"></script>
+        <script type="text/javascript" src="js/vendor/angular-strap.tpl.min.js"></script>
+        <script type="text/javascript" src="js/vendor/react-0.12.2/build/react.js"></script>
+        <script type="text/javascript" src="js/vendor/react-0.12.2/build/JSXTransformer.js"></script>
+        <script type="text/javascript" src="js/task1.js"></script>
+        <script type="text/javascript" src="js/vendor/dimensions.js"></script>
+    </body>
+</html>
+
+    
+  

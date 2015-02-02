@@ -1,0 +1,18 @@
+<div class="popover" tabindex="-1" ng-show="content">
+  <div class="arrow"></div>
+  <h3 class="popover-title" ng-bind-html="title" ng-show="title"></h3>
+  <div class="popover-content">
+    <form name="popoverForm">
+        <ul style="list-style: none ;margin-left: -40px">
+            <li ng-repeat="colobj in columnIndexMap[$index] track by $index">
+                <input type="checkbox" value='{{ colobj.column }}' ng-model='colobj.selected'/>&nbsp;&nbsp; {{ colobj.column }}
+            </li>
+        </ul>
+
+        <div class="form-actions">
+            <button type="button" class="btn-primary" ng-click="reset();$hide()">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn-primary" ng-click="forfilteration();$hide()">Filter</button>
+        </div>
+    </form>
+  </div>
+</div>
